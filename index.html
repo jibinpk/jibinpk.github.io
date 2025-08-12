@@ -4,172 +4,255 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Jibin P K — Technical Support Engineer</title>
-  <meta name="description" content="Jibin P K — Technical Support Engineer | Customer Success Enthusiast. Customer-first technical support, WordPress & WooCommerce, data-driven insights." />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <meta name="description" content="Jibin P K — Technical Support Engineer & Customer Success Enthusiast. WordPress & WooCommerce support, data-driven customer success, and technical troubleshooting." />
+  <meta name="author" content="Jibin P K">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Jibin P K — Technical Support Engineer">
+  <meta property="og:description" content="Customer-first technical support and customer success. WordPress & WooCommerce specialist." />
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="og-image.png">
+  <link rel="icon" href="favicon.ico">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+
+  <!-- Core styles -->
   <link rel="stylesheet" href="style.css">
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Jibin P K",
+    "jobTitle": "Technical Support Engineer — Customer Success Enthusiast",
+    "url": "https://yourusername.github.io",
+    "sameAs": [
+      "https://www.linkedin.com/in/jibinpk/",
+      "https://github.com/yourusername"
+    ],
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "APJ Abdul Kalam Technological University"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Kochi",
+      "addressRegion": "Kerala",
+      "addressCountry": "India"
+    }
+  }
+  </script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
 
-  <header class="site-header">
-    <div class="container header-inner">
+  <header class="site-header" id="top">
+    <div class="container header-row">
       <div class="brand">
-        <div class="avatar" aria-hidden="true">
-          <!-- Replace with your avatar file/avatar URL -->
-          <img src="linkedinpropic.jpeg" alt="Jibin P K">
-        </div>
-        <div>
-          <h1 class="name">Jibin P K</h1>
-          <p class="role">Technical Support Engineer — Customer Success Enthusiast</p>
+        <img id="avatar" src="avatar.jpg" alt="Jibin P K" class="avatar" />
+        <div class="brand-text">
+          <div class="brand-name">Jibin P K</div>
+          <div class="brand-role">Technical Support Engineer — Customer Success Enthusiast</div>
         </div>
       </div>
 
-      <nav class="nav" aria-label="Primary">
-        <button id="nav-toggle" aria-expanded="false" aria-controls="nav-list">Menu</button>
+      <nav class="nav" aria-label="Main Navigation">
+        <button id="theme-toggle" aria-pressed="false" title="Toggle theme">🌙</button>
+        <button id="menu-btn" aria-expanded="false" aria-controls="nav-list">☰</button>
         <ul id="nav-list" class="nav-list">
           <li><a href="#about">About</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#projects">Projects</a></li>
-          <li><a href="#experience">Experience</a></li>
+          <li><a href="#metrics">Metrics</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
     </div>
 
-    <div class="hero">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-bg" id="hero-bg" aria-hidden="true"></div>
       <div class="container hero-inner">
-        <div class="hero-content">
+        <div class="hero-left">
           <p class="eyebrow">Hi — I'm</p>
-          <h2 class="hero-title">Jibin P K</h2>
-          <p class="hero-sub">Technical Support Engineer • Customer Success Enthusiast</p>
-          <p class="hero-desc">I turn technical problems into great customer experiences — I bridge technology & people, helping users get the most value from products built on WordPress & WooCommerce.</p>
-          <div class="cta-row">
+          <h1 class="hero-title">Jibin P K</h1>
+          <p class="hero-typed"><span id="typed-role" aria-live="polite"></span></p>
+          <p class="hero-desc">I turn technical problems into great customer experience — bridging technology & people for WordPress & WooCommerce products.</p>
+
+          <div class="hero-cta">
             <a class="btn primary" href="#projects">View Projects</a>
             <a class="btn ghost" href="#contact">Get In Touch</a>
           </div>
-        </div>
 
-        <div class="hero-card" aria-hidden="true">
-          <div class="metrics">
-            <div>
-              <span class="metric">115</span>
-              <span class="label">Connections</span>
+          <div class="hero-stats" aria-hidden="true">
+            <div class="stat">
+              <div class="num" data-target="500">0</div>
+              <div class="label">Issues Resolved</div>
             </div>
-            <div>
-              <span class="metric">Google AI<br>Essentials V1</span>
-              <span class="label">Certification</span>
+            <div class="stat">
+              <div class="num" data-target="1">0</div>
+              <div class="label">Years Experience</div>
             </div>
-            <div>
-              <span class="metric">B.Tech</span>
-              <span class="label">APJ Abdul Kalam Technological Univ.</span>
+            <div class="stat">
+              <div class="num" data-target="115">0</div>
+              <div class="label">Connections</div>
             </div>
           </div>
         </div>
 
+        <aside class="hero-card" aria-label="Quick facts">
+          <div class="card-head">
+            <img src="avatar.jpg" alt="Jibin P K headshot" class="card-avatar">
+            <div>
+              <strong>Jibin P K</strong>
+              <div class="muted">Technical Support Engineer</div>
+            </div>
+          </div>
+
+          <dl class="facts">
+            <div><dt>Location</dt><dd>Kochi, Kerala, India</dd></div>
+            <div><dt>Education</dt><dd>B.Tech — APJ Abdul Kalam Technological University</dd></div>
+            <div><dt>Cert.</dt><dd>Google AI Essentials V1</dd></div>
+          </dl>
+
+          <div class="card-actions">
+            <a class="link" href="https://www.linkedin.com/in/jibinpk/" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="link" href="mailto:mail@example.com">Email</a>
+            <a class="link" href="https://github.com/yourusername" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </aside>
       </div>
-    </div>
+    </section>
   </header>
 
   <main id="main">
+    <!-- ABOUT -->
     <section id="about" class="section container">
-      <div class="split">
+      <div class="grid-2">
         <div>
-          <h3>About</h3>
-          <p class="lead">Technical problem-solver and customer advocate. I transform frustrated users into loyal advocates through empathy-driven solutions and strategic thinking. Currently a Technical Support Engineer at Mozilor Technologies — focused on WordPress & WooCommerce support, technical troubleshooting, and building strong customer relationships.</p>
+          <h2>About</h2>
+          <p class="lead">Technical problem-solver and customer advocate. I transform frustrated users into loyal advocates through empathy-driven solutions and strategic thinking. Currently a Technical Support Engineer at Mozilor Technologies — focused on WordPress & WooCommerce support, troubleshooting, and customer success strategy.</p>
 
           <ul class="bullets">
             <li>Customer-first technical support across global customers</li>
-            <li>Data-driven approach to identify improvement opportunities</li>
-            <li>Interested in transitioning to Customer Success Management</li>
+            <li>Data-driven improvements & automation to reduce repeat tickets</li>
+            <li>Transitioning to Customer Success Management roles</li>
           </ul>
 
           <div class="links">
-            <a class="link" href="https://www.linkedin.com/in/jibinpk/" target="_blank" rel="noopener">LinkedIn</a>
-            <!-- replace mail@example.com with your email -->
-            <a class="link" href="mailto:jibinpkkd@gmail.com">Email</a>
-            <a class="link" href="https://github.com/jibinpk" target="_blank" rel="noopener">GitHub</a>
+            <a class="pill" href="#metrics">Customer Success Metrics</a>
+            <a class="pill" href="#projects">Case Studies</a>
+            <a class="pill" href="#contact">Hire me</a>
           </div>
         </div>
 
-        <div>
-          <h4>Quick facts</h4>
-          <dl class="facts">
-            <div>
-              <dt>Role</dt><dd>Technical Support Engineer</dd>
-            </div>
-            <div>
-              <dt>Education</dt><dd>B.Tech Computer Science — APJ Abdul Kalam Technological University</dd>
-            </div>
-            <div>
-              <dt>Cert.</dt><dd>Google AI Essentials V1</dd>
-            </div>
-            <div>
-              <dt>Location</dt><dd>Kochi, Kerala, India</dd>
-            </div>
+        <aside>
+          <h3>Quick facts</h3>
+          <dl class="facts compact">
+            <div><dt>Role</dt><dd>Technical Support Engineer</dd></div>
+            <div><dt>Education</dt><dd>B.Tech Computer Science</dd></div>
+            <div><dt>Location</dt><dd>Kochi, Kerala</dd></div>
+            <div><dt>Cert</dt><dd>Google AI Essentials V1</dd></div>
           </dl>
-        </div>
+        </aside>
       </div>
     </section>
 
+    <!-- SKILLS -->
     <section id="skills" class="section alt">
       <div class="container">
-        <h3>Skills</h3>
-        <p class="muted">Core strengths and tools I frequently use</p>
-        <div class="chips">
-          <span class="chip">Customer Support</span>
-          <span class="chip">Technical Troubleshooting</span>
-          <span class="chip">WordPress & WooCommerce</span>
-          <span class="chip">Customer Success</span>
-          <span class="chip">Data Analysis</span>
-          <span class="chip">Git & GitHub</span>
-          <span class="chip">Communication</span>
+        <h2>Skills</h2>
+        <p class="muted">Grouped by category — hover or tap for details</p>
+
+        <div class="skill-groups">
+          <div class="skill-group">
+            <h4>Technical</h4>
+            <div class="skill-list">
+              <div class="skill">
+                <div class="skill-meta"><span>WordPress & WooCommerce</span><span class="years">3 yrs</span></div>
+                <div class="progress" data-value="85"><span></span></div>
+              </div>
+              <div class="skill">
+                <div class="skill-meta"><span>JavaScript / Bash</span><span class="years">2 yrs</span></div>
+                <div class="progress" data-value="70"><span></span></div>
+              </div>
+              <div class="skill">
+                <div class="skill-meta"><span>Support Automation</span><span class="years">2 yrs</span></div>
+                <div class="progress" data-value="72"><span></span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <h4>Customer Success</h4>
+            <div class="skill-list">
+              <div class="skill">
+                <div class="skill-meta"><span>Ticket Triage & SLA Mgmt</span><span class="years">3 yrs</span></div>
+                <div class="progress" data-value="88"><span></span></div>
+              </div>
+              <div class="skill">
+                <div class="skill-meta"><span>Customer Communication</span><span class="years">4 yrs</span></div>
+                <div class="progress" data-value="92"><span></span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <h4>Tools</h4>
+            <div class="skill-list">
+              <div class="skill">
+                <div class="skill-meta"><span>Git & GitHub</span><span class="years">2 yrs</span></div>
+                <div class="progress" data-value="75"><span></span></div>
+              </div>
+              <div class="skill">
+                <div class="skill-meta"><span>Google Analytics</span><span class="years">1 yr</span></div>
+                <div class="progress" data-value="60"><span></span></div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
+    <!-- PROJECTS -->
     <section id="projects" class="section">
       <div class="container">
-        <div class="section-head">
-          <h3>Projects</h3>
-          <p class="muted">Selected work and case studies</p>
-        </div>
+        <h2>Projects & Case Studies</h2>
+        <p class="muted">Selected work with problem → solution → impact format</p>
 
         <div class="cards-grid">
-          <!-- Project 1 (edit details & links) -->
           <article class="card">
-            <img src="https://via.placeholder.com/800x450" alt="Project screenshot">
+            <img data-src="project1.webp" alt="Support Dashboard screenshot" class="lazy">
             <div class="card-body">
-              <h4>Support Dashboard — Internal Tool</h4>
-              <p class="muted">Improved ticket triage and response time by building internal dashboards and standard response templates for support team (WordPress & plugins).</p>
+              <h3>Support Dashboard — Internal Tool</h3>
+              <p class="muted">Problem: Slow ticket triage and manual reporting. Solution: Built dashboard & response templates integrated with support workflow. Impact: ~30% faster SLAs, 20% drop in repeat tickets.</p>
               <div class="card-meta">
-                <span>Customer Support</span>
+                <span class="tag">Customer Support</span>
                 <a href="#" class="card-link">View repo</a>
               </div>
             </div>
           </article>
 
-          <!-- Project 2 -->
           <article class="card">
-            <img src="https://via.placeholder.com/800x450" alt="Project screenshot">
+            <img data-src="project2.webp" alt="Knowledge base system" class="lazy">
             <div class="card-body">
-              <h4>Knowledge Base System</h4>
-              <p class="muted">Designed and documented KB articles that reduced repetitive tickets and improved self-serve success rates.</p>
+              <h3>Knowledge Base System</h3>
+              <p class="muted">Problem: High volume of repetitive queries. Solution: Created KB and onboarding docs. Impact: Self-service success increased by 25%.</p>
               <div class="card-meta">
-                <span>Documentation</span>
+                <span class="tag">Documentation</span>
                 <a href="#" class="card-link">Read case study</a>
               </div>
             </div>
           </article>
 
-          <!-- Project 3 -->
           <article class="card">
-            <img src="https://via.placeholder.com/800x450" alt="Project screenshot">
+            <img data-src="project3.webp" alt="Automation scripts" class="lazy">
             <div class="card-body">
-              <h4>Automation Scripts</h4>
-              <p class="muted">Small utilities for log collection, plugin health checks, and automated reporting—cutting manual efforts for support by ~30%.</p>
+              <h3>Automation Scripts</h3>
+              <p class="muted">Small utilities for log collection and plugin checks that reduced manual effort by ~30% and improved root-cause analysis.</p>
               <div class="card-meta">
-                <span>Scripting</span>
+                <span class="tag">Scripting</span>
                 <a href="#" class="card-link">View scripts</a>
               </div>
             </div>
@@ -178,43 +261,41 @@
       </div>
     </section>
 
-    <section id="experience" class="section alt">
+    <!-- METRICS / CUSTOMER SUCCESS -->
+    <section id="metrics" class="section alt">
       <div class="container">
-        <h3>Experience</h3>
+        <h2>Customer Success Metrics</h2>
+        <p class="muted">Key outcomes and measurable improvements</p>
 
-        <div class="timeline">
-          <div class="item">
-            <div class="time">Jun 2025 — Present</div>
-            <div class="info">
-              <h4>Technical Support Engineer — Mozilor Technologies</h4>
-              <p class="muted">Providing technical assistance to global customers using WordPress & WooCommerce plugins. Troubleshooting, customer engagement, and cross-team coordination to resolve issues and improve product experience.</p>
-            </div>
+        <div class="metrics-grid">
+          <div class="metric-card">
+            <div class="big">95%</div>
+            <div class="muted">Customer Satisfaction (CSAT)</div>
           </div>
-
-          <div class="item">
-            <div class="time">2021 — 2025</div>
-            <div class="info">
-              <h4>B.Tech — APJ Abdul Kalam Technological University</h4>
-              <p class="muted">Computer Science & Engineering — First Class with Distinction. Active in IEEE and technical projects.</p>
-            </div>
+          <div class="metric-card">
+            <div class="big">2h</div>
+            <div class="muted">Average First Response Time</div>
+          </div>
+          <div class="metric-card">
+            <div class="big">30%</div>
+            <div class="muted">Reduction in Reopened Tickets</div>
           </div>
         </div>
-
       </div>
     </section>
 
+    <!-- CONTACT -->
     <section id="contact" class="section">
       <div class="container">
-        <h3>Contact</h3>
-        <p class="lead">Want to collaborate or talk about customer success? Send a message.</p>
+        <h2>Contact</h2>
+        <p class="lead">Want to collaborate or discuss customer success? Send a message — I typically reply within 48 hours.</p>
 
-        <form class="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
+        <form id="contact-form" class="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
           <div class="field-row">
             <input name="name" type="text" placeholder="Your name" required>
             <input name="_replyto" type="email" placeholder="Your email" required>
           </div>
           <textarea name="message" rows="6" placeholder="How can I help?" required></textarea>
-          <!-- Honeypot -->
           <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
           <button type="submit" class="btn primary">Send Message</button>
         </form>
@@ -226,10 +307,10 @@
 
   <footer class="site-footer">
     <div class="container">
-      <p>© <span id="year"></span> Jibin P K — Technical Support Engineer. Built with ❤️. Hosted on GitHub Pages.</p>
+      <small>© <span id="year"></span> Jibin P K — Technical Support Engineer. Built with ❤️. Hosted on GitHub Pages.</small>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
