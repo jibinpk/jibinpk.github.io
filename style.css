@@ -56,16 +56,24 @@
     --transition-slow: 0.5s ease;
 }
 
-/* Reset and Base Styles */
+/* Performance optimizations */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+/* Reset and Base Styles */
 html {
     scroll-behavior: smooth;
     font-size: 16px;
+    box-sizing: border-box;
 }
 
 body {
@@ -75,6 +83,10 @@ body {
     line-height: 1.6;
     overflow-x: hidden;
     min-height: 100vh;
+    /* Enable hardware acceleration */
+    transform: translateZ(0);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 /* Navigation */
