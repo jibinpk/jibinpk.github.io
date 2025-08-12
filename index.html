@@ -3,274 +3,645 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Jibin P K - Technical Support Engineer & Customer Success Specialist. Expert in WordPress, WooCommerce, and customer-focused solutions.">
-    <meta name="keywords" content="Technical Support Engineer, Customer Success, WordPress, WooCommerce, Web Development, Portfolio">
-    <meta name="author" content="Jibin P K">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://yourusername.github.io/portfolio_site/">
-    <meta property="og:title" content="Jibin P K - Technical Support Engineer Portfolio">
-    <meta property="og:description" content="Technical Support Engineer & Customer Success Specialist specializing in WordPress, WooCommerce, and innovative problem-solving.">
-    <meta property="og:image" content="https://yourusername.github.io/portfolio_site/assets/og-image.jpg">
+    <title>Julia Huang - AI Artist Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://yourusername.github.io/portfolio_site/">
-    <meta property="twitter:title" content="Jibin P K - Technical Support Engineer Portfolio">
-    <meta property="twitter:description" content="Technical Support Engineer & Customer Success Specialist specializing in WordPress, WooCommerce, and innovative problem-solving.">
-    <meta property="twitter:image" content="https://yourusername.github.io/portfolio_site/assets/og-image.jpg">
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f8e8e8 0%, #f0d0d0 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22>💼</text></svg>">
-    
-    <title>Jibin P K - Technical Support Engineer Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Preload critical resources -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" as="style">
-    <link rel="preload" href="style.css" as="style">
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto auto auto;
+            gap: 20px;
+            height: 100vh;
+        }
+
+        /* Header */
+        .header {
+            grid-column: 1 / -1;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background: rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 300;
+            color: #333;
+            letter-spacing: 2px;
+        }
+
+        .nav {
+            display: flex;
+            gap: 40px;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: #666;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav a:hover {
+            color: #333;
+        }
+
+        .nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background: #e85a7a;
+            transition: width 0.3s ease;
+        }
+
+        .nav a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: rgba(255, 255, 255, 0.4);
+            border-radius: 30px;
+            padding: 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 40px;
+            width: 80px;
+            height: 80px;
+            background: radial-gradient(circle, rgba(232, 90, 122, 0.3) 0%, transparent 70%);
+            border-radius: 50%;
+            animation: pulse 3s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.3; }
+            50% { transform: scale(1.2); opacity: 0.6; }
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 900;
+            color: #2c2c2c;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .hero .subtitle {
+            font-size: 3rem;
+            font-weight: 300;
+            color: #666;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+
+        .hero .tagline {
+            font-size: 4rem;
+            font-weight: 900;
+            color: #2c2c2c;
+            line-height: 1.1;
+        }
+
+        /* Profile Section */
+        .profile {
+            background: #d4b5a0;
+            border-radius: 30px;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .profile-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .profile:hover .profile-image {
+            transform: scale(1.05);
+        }
+
+        /* Project Grid */
+        .projects {
+            grid-column: 1 / -1;
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr 1fr;
+            gap: 20px;
+            height: 300px;
+        }
+
+        .about-card {
+            background: rgba(255, 255, 255, 0.4);
+            border-radius: 20px;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .about-card::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 40px;
+            height: 40px;
+            background: radial-gradient(circle, rgba(232, 90, 122, 0.4) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .about-card p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .contact-card {
+            background: linear-gradient(135deg, #e85a7a 0%, #d14865 100%);
+            border-radius: 20px;
+            padding: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: white;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+
+        .contact-card h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        .contact-card .arrow {
+            font-size: 2rem;
+            transition: transform 0.3s ease;
+        }
+
+        .contact-card:hover .arrow {
+            transform: translate(10px, -10px);
+        }
+
+        .project-showcase {
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 20px;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-showcase:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-showcase h3 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .project-showcase .arrow {
+            font-size: 1.5rem;
+            color: #666;
+            transition: transform 0.3s ease;
+        }
+
+        .project-showcase:hover .arrow {
+            transform: translate(5px, -5px);
+        }
+
+        .project-preview {
+            width: 100%;
+            height: 120px;
+            border-radius: 15px;
+            background: linear-gradient(45deg, #c19882, #d4b5a0);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-preview::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="30" cy="30" r="20" fill="rgba(255,255,255,0.3)"/><circle cx="70" cy="70" r="15" fill="rgba(255,255,255,0.2)"/></svg>');
+            opacity: 0.5;
+        }
+
+        .social-links {
+            grid-column: 1 / -1;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            padding: 20px;
+        }
+
+        .social-links a {
+            text-decoration: none;
+            color: #666;
+            font-weight: 500;
+            padding: 10px 20px;
+            border-radius: 25px;
+            background: rgba(255, 255, 255, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: #e85a7a;
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .projects {
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr;
+                height: auto;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+                padding: 15px;
+            }
+            
+            .hero h1, .hero .tagline {
+                font-size: 2.5rem;
+            }
+            
+            .hero .subtitle {
+                font-size: 2rem;
+            }
+            
+            .hero, .about-card, .contact-card {
+                padding: 30px;
+            }
+            
+            .projects {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            
+            .nav {
+                gap: 20px;
+            }
+        }
+
+        /* Interactive Elements */
+        .floating-elements {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .floating-circle {
+            position: absolute;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(232, 90, 122, 0.1) 0%, transparent 70%);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .floating-circle:nth-child(1) {
+            width: 100px;
+            height: 100px;
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .floating-circle:nth-child(2) {
+            width: 150px;
+            height: 150px;
+            top: 60%;
+            right: 15%;
+            animation-delay: 2s;
+        }
+
+        .floating-circle:nth-child(3) {
+            width: 80px;
+            height: 80px;
+            bottom: 20%;
+            left: 20%;
+            animation-delay: 4s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+        }
+    </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">
-                <span class="logo-text">Jibin<span class="accent">PK</span></span>
+    <div class="floating-elements">
+        <div class="floating-circle"></div>
+        <div class="floating-circle"></div>
+        <div class="floating-circle"></div>
+    </div>
+
+    <div class="container">
+        <header class="header">
+            <div class="logo">JULIA HUANG</div>
+            <nav class="nav">
+                <a href="#projects">PROJECTS</a>
+                <a href="#about">ABOUT</a>
+                <a href="#contact">CONTACT</a>
+            </nav>
+        </header>
+
+        <section class="hero">
+            <h1>Artist Redefining</h1>
+            <div class="subtitle">Architecture</div>
+            <div class="tagline">with AI-Driven Design</div>
+        </section>
+
+        <section class="profile">
+            <svg width="100%" height="100%" viewBox="0 0 400 400" class="profile-image">
+                <defs>
+                    <linearGradient id="skinGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#f4c2a1"/>
+                        <stop offset="100%" style="stop-color:#e8a87c"/>
+                    </linearGradient>
+                    <linearGradient id="hairGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#ff9db4"/>
+                        <stop offset="100%" style="stop-color:#e85a7a"/>
+                    </linearGradient>
+                    <linearGradient id="sweaterGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#d4b5a0"/>
+                        <stop offset="100%" style="stop-color:#c19882"/>
+                    </linearGradient>
+                </defs>
+                
+                <!-- Face -->
+                <ellipse cx="200" cy="200" rx="80" ry="90" fill="url(#skinGradient)"/>
+                
+                <!-- Hair -->
+                <path d="M120 160 Q200 80 280 160 Q290 180 285 200 Q280 220 270 240 Q200 180 130 240 Q120 220 115 200 Q110 180 120 160" fill="url(#hairGradient)"/>
+                
+                <!-- Eyes -->
+                <ellipse cx="180" cy="185" rx="8" ry="6" fill="#2c2c2c"/>
+                <ellipse cx="220" cy="185" rx="8" ry="6" fill="#2c2c2c"/>
+                <ellipse cx="182" cy="183" rx="2" ry="2" fill="white"/>
+                <ellipse cx="222" cy="183" rx="2" ry="2" fill="white"/>
+                
+                <!-- Glasses -->
+                <circle cx="180" cy="185" r="25" fill="none" stroke="#8b4513" stroke-width="2"/>
+                <circle cx="220" cy="185" r="25" fill="none" stroke="#8b4513" stroke-width="2"/>
+                <line x1="205" y1="180" x2="205" y2="185" stroke="#8b4513" stroke-width="2"/>
+                
+                <!-- Nose -->
+                <ellipse cx="200" cy="200" rx="3" ry="8" fill="#e8a87c"/>
+                
+                <!-- Mouth -->
+                <path d="M190 215 Q200 225 210 215" fill="none" stroke="#d4988a" stroke-width="2"/>
+                
+                <!-- Sweater -->
+                <rect x="120" y="280" width="160" height="120" rx="20" fill="url(#sweaterGradient)"/>
+                <path d="M140 300 L180 290 L220 290 L260 300" fill="none" stroke="#a67c5a" stroke-width="2"/>
+                <path d="M140 320 L180 310 L220 310 L260 320" fill="none" stroke="#a67c5a" stroke-width="2"/>
+            </svg>
+        </section>
+
+        <section class="projects">
+            <div class="about-card">
+                <p>Julia Huang is an innovative AI artist, renowned for blending cutting-edge technology with creative expression. Based in LA, she crafts unique digital art experiences accessible globally.</p>
             </div>
-            <div class="nav-links">
-                <a href="#home" class="nav-link">Home</a>
-                <a href="#about" class="nav-link">About</a>
-                <a href="#work" class="nav-link">Work</a>
-                <a href="#contact" class="nav-link">Contact</a>
+
+            <div class="contact-card" onclick="showContactModal()">
+                <div>
+                    <div style="font-size: 14px; margin-bottom: 10px;">Have some questions?</div>
+                    <h2>Contact me</h2>
+                </div>
+                <div class="arrow">↗</div>
             </div>
-            <div class="nav-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
+
+            <div class="project-showcase">
+                <h3>Musea <span class="arrow">↗</span></h3>
+                <div class="project-preview"></div>
             </div>
+
+            <div class="project-showcase">
+                <h3>Elara <span class="arrow">↗</span></h3>
+                <div class="project-preview" style="background: linear-gradient(45deg, #ff9db4, #e85a7a);"></div>
+            </div>
+        </section>
+
+        <div class="social-links">
+            <a href="#" onclick="alert('Instagram profile')">INSTAGRAM</a>
+            <a href="#" onclick="alert('Twitter profile')">TWITTER</a>
+            <a href="#" onclick="alert('LinkedIn profile')">LINKEDIN</a>
         </div>
-    </nav>
+    </div>
 
-    <!-- Main Content -->
-    <main class="main-content" id="home">
-        <!-- Bento Grid Container -->
-        <div class="bento-grid">
-            <!-- Hero Card -->
-            <div class="bento-card hero-card">
-                <div class="hero-content">
-                    <div class="hero-badge">
-                        <span class="status-dot"></span>
-                        Available for work
-                    </div>
-                    <h1 class="hero-title">
-                        Hi, I'm <span class="accent">Jibin P K</span>
-                    </h1>
-                    <p class="hero-subtitle">Technical Support Engineer & Customer Success Specialist</p>
-                    <p class="hero-description">
-                        Passionate about delivering exceptional customer experiences through technical expertise 
-                        and innovative problem-solving.
-                    </p>
-                    <div class="hero-buttons">
-                        <a href="#contact" class="btn btn-primary">
-                            <i class="fas fa-envelope"></i>
-                            Let's Connect
-                        </a>
-                        <a href="#work" class="btn btn-secondary">
-                            <i class="fas fa-briefcase"></i>
-                            View Work
-                        </a>
-                    </div>
+    <!-- Contact Modal -->
+    <div id="contactModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 1000; align-items: center; justify-content: center;">
+        <div style="background: white; padding: 40px; border-radius: 20px; max-width: 500px; width: 90%;">
+            <h2 style="margin-bottom: 20px; color: #333;">Get in Touch</h2>
+            <form id="contactForm">
+                <input type="text" placeholder="Your Name" style="width: 100%; padding: 15px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 10px; font-size: 16px;" required>
+                <input type="email" placeholder="Your Email" style="width: 100%; padding: 15px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 10px; font-size: 16px;" required>
+                <textarea placeholder="Your Message" rows="5" style="width: 100%; padding: 15px; margin-bottom: 20px; border: 1px solid #ddd; border-radius: 10px; font-size: 16px; resize: vertical;" required></textarea>
+                <div style="display: flex; gap: 15px; justify-content: flex-end;">
+                    <button type="button" onclick="hideContactModal()" style="padding: 15px 30px; background: #f5f5f5; border: none; border-radius: 10px; cursor: pointer; font-size: 16px;">Cancel</button>
+                    <button type="submit" style="padding: 15px 30px; background: #e85a7a; color: white; border: none; border-radius: 10px; cursor: pointer; font-size: 16px;">Send Message</button>
                 </div>
-                <div class="hero-image">
-                    <div class="profile-circle">
-                        <div class="profile-img">
-                            <i class="fas fa-user"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- About Card -->
-            <div class="bento-card about-card" id="about">
-                <div class="card-header">
-                    <h2 class="card-title">About Me</h2>
-                    <i class="fas fa-user-circle card-icon"></i>
-                </div>
-                <div class="about-content">
-                    <p>I'm a dedicated Technical Support Engineer with expertise in WordPress, WooCommerce, and customer success management. I love solving complex problems and creating seamless user experiences.</p>
-                    <div class="about-stats">
-                        <div class="stat">
-                            <span class="stat-number">3+</span>
-                            <span class="stat-label">Years Experience</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number">500+</span>
-                            <span class="stat-label">Issues Resolved</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number">98%</span>
-                            <span class="stat-label">Customer Satisfaction</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Skills Card -->
-            <div class="bento-card skills-card">
-                <div class="card-header">
-                    <h2 class="card-title">Skills</h2>
-                    <i class="fas fa-code card-icon"></i>
-                </div>
-                <div class="skills-grid">
-                    <div class="skill-item">
-                        <i class="fab fa-wordpress skill-icon"></i>
-                        <span>WordPress</span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fas fa-shopping-cart skill-icon"></i>
-                        <span>WooCommerce</span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fab fa-js-square skill-icon"></i>
-                        <span>JavaScript</span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fab fa-html5 skill-icon"></i>
-                        <span>HTML/CSS</span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fas fa-database skill-icon"></i>
-                        <span>MySQL</span>
-                    </div>
-                    <div class="skill-item">
-                        <i class="fas fa-headset skill-icon"></i>
-                        <span>Customer Support</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Experience Card -->
-            <div class="bento-card experience-card" id="work">
-                <div class="card-header">
-                    <h2 class="card-title">Experience</h2>
-                    <i class="fas fa-briefcase card-icon"></i>
-                </div>
-                <div class="experience-timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <h3>Technical Support Engineer</h3>
-                            <p class="timeline-company">Current Role</p>
-                            <p class="timeline-desc">Providing technical support for WordPress and WooCommerce platforms</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <h3>Customer Success Specialist</h3>
-                            <p class="timeline-company">Previous Experience</p>
-                            <p class="timeline-desc">Focused on customer retention and satisfaction</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Projects Card -->
-            <div class="bento-card projects-card">
-                <div class="card-header">
-                    <h2 class="card-title">Featured Projects</h2>
-                    <i class="fas fa-rocket card-icon"></i>
-                </div>
-                <div class="projects-grid">
-                    <div class="project-item">
-                        <div class="project-image">
-                            <i class="fas fa-shopping-cart"></i>
-                        </div>
-                        <h3>E-commerce Solutions</h3>
-                        <p>Custom WooCommerce implementations</p>
-                    </div>
-                    <div class="project-item">
-                        <div class="project-image">
-                            <i class="fas fa-globe"></i>
-                        </div>
-                        <h3>WordPress Websites</h3>
-                        <p>Responsive and SEO-optimized sites</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Contact Card -->
-            <div class="bento-card contact-card" id="contact">
-                <div class="card-header">
-                    <h2 class="card-title">Let's Connect</h2>
-                    <i class="fas fa-paper-plane card-icon"></i>
-                </div>
-                <div class="contact-content">
-                    <p>Ready to collaborate? Let's discuss your next project!</p>
-                    <div class="contact-links">
-                        <a href="mailto:jibin.pk@example.com" class="contact-link">
-                            <i class="fas fa-envelope"></i>
-                            <span>Email</span>
-                        </a>
-                        <a href="https://linkedin.com/in/jibinpk" target="_blank" rel="noopener noreferrer" class="contact-link">
-                            <i class="fab fa-linkedin"></i>
-                            <span>LinkedIn</span>
-                        </a>
-                        <a href="https://github.com/jibinpk" target="_blank" rel="noopener noreferrer" class="contact-link">
-                            <i class="fab fa-github"></i>
-                            <span>GitHub</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Quote Card -->
-            <div class="bento-card quote-card">
-                <div class="quote-content">
-                    <i class="fas fa-quote-left quote-icon"></i>
-                    <blockquote>
-                        "Excellence in customer service is not just about solving problems, 
-                        it's about creating experiences that exceed expectations."
-                    </blockquote>
-                    <cite>- Personal Philosophy</cite>
-                </div>
-            </div>
-
-            <!-- Social Media Card -->
-            <div class="bento-card social-card">
-                <div class="card-header">
-                    <h2 class="card-title">Follow Me</h2>
-                    <i class="fas fa-share-alt card-icon"></i>
-                </div>
-                <div class="social-links">
-                    <a href="https://twitter.com/jibinpk" target="_blank" rel="noopener noreferrer" class="social-link twitter">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a href="https://linkedin.com/in/jibinpk" target="_blank" rel="noopener noreferrer" class="social-link linkedin">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="https://github.com/jibinpk" target="_blank" rel="noopener noreferrer" class="social-link github">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://instagram.com/jibinpk" target="_blank" rel="noopener noreferrer" class="social-link instagram">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                </div>
-            </div>
+            </form>
         </div>
-    </main>
+    </div>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <p>&copy; 2024 Jibin P K. All rights reserved.</p>
-            <p>Designed with ❤️ and built with modern web technologies</p>
-        </div>
-    </footer>
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('.nav a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
 
-    <script src="script.js"></script>
+        // Project showcase hover effects
+        document.querySelectorAll('.project-showcase').forEach(project => {
+            project.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px) scale(1.02)';
+                this.style.boxShadow = '0 20px 40px rgba(0,0,0,0.15)';
+            });
+            
+            project.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+                this.style.boxShadow = 'none';
+            });
+        });
+
+        // Contact modal functions
+        function showContactModal() {
+            const modal = document.getElementById('contactModal');
+            modal.style.display = 'flex';
+            modal.style.animation = 'fadeIn 0.3s ease';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function hideContactModal() {
+            const modal = document.getElementById('contactModal');
+            modal.style.animation = 'fadeOut 0.3s ease';
+            setTimeout(() => {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }, 300);
+        }
+
+        // Contact form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Simulate form submission
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'Sending...';
+            submitBtn.disabled = true;
+            
+            setTimeout(() => {
+                alert('Thank you for your message! I\'ll get back to you soon.');
+                this.reset();
+                hideContactModal();
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            }, 2000);
+        });
+
+        // Close modal when clicking outside
+        document.getElementById('contactModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                hideContactModal();
+            }
+        });
+
+        // Parallax effect for floating elements
+        document.addEventListener('mousemove', function(e) {
+            const circles = document.querySelectorAll('.floating-circle');
+            const x = e.clientX / window.innerWidth;
+            const y = e.clientY / window.innerHeight;
+            
+            circles.forEach((circle, index) => {
+                const speed = (index + 1) * 0.5;
+                const xPos = (x - 0.5) * speed * 50;
+                const yPos = (y - 0.5) * speed * 50;
+                circle.style.transform = `translate(${xPos}px, ${yPos}px)`;
+            });
+        });
+
+        // Add CSS animations dynamically
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fadeIn {
+                from { opacity: 0; transform: scale(0.9); }
+                to { opacity: 1; transform: scale(1); }
+            }
+            
+            @keyframes fadeOut {
+                from { opacity: 1; transform: scale(1); }
+                to { opacity: 0; transform: scale(0.9); }
+            }
+            
+            .project-showcase {
+                transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            }
+            
+            .nav a {
+                position: relative;
+                overflow: hidden;
+            }
+            
+            .nav a::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: -100%;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(90deg, transparent, rgba(232, 90, 122, 0.2), transparent);
+                transition: left 0.5s;
+            }
+            
+            .nav a:hover::before {
+                left: 100%;
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Initialize page animations
+        window.addEventListener('load', function() {
+            document.querySelectorAll('.hero, .profile, .project-showcase, .about-card, .contact-card').forEach((element, index) => {
+                element.style.opacity = '0';
+                element.style.transform = 'translateY(30px)';
+                
+                setTimeout(() => {
+                    element.style.transition = 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }, index * 100);
+            });
+        });
+    </script>
 </body>
 </html>
