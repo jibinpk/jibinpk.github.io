@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<products dateTime="134000607460052838">
+    <product>
+        <ProductName><![CDATA[FIFA Africa Animal1 Mouse Pad]]></ProductName>
+        <ProductCode><![CDATA[7666234226048]]></ProductCode>
+        <Category><![CDATA[Mouse Pad]]></Category>
+        <ProductSummary><![CDATA[FIFA Africa Animal1 Mouse Pad- 2010 FIFA World Cup South Africa.]]></ProductSummary>
+        <Price>1.000040</Price>
+        <AvailableQty>no</AvailableQty>
+        <image><![CDATA[https://api.esquire.co.za/Resources/Images/Products/Big_Screenshot-2025-05-23-114633.jpg]]></image>
+    </product>
+
+    <product>
+        <ProductName><![CDATA[Marlin Brown Kraft Roll 480mm X 2m]]></ProductName>
+        <ProductCode><![CDATA[6009685854865]]></ProductCode>
+        <Category><![CDATA[Book Covers - Brown Kraft]]></Category>
+        <ProductSummary><![CDATA[Marlin Brown Kraft Roll 480mm X 2m, Retail Packaging, No Warranty]]></ProductSummary>
+        <Price>4.991000</Price>
+        <AvailableQty>no</AvailableQty>
+        <image><![CDATA[https://brainware.co.za/ProdImg/Big_001Hd.png]]></image>
+    </product>
+
+    <product>
+        <ProductName><![CDATA[Tweety Shaped Eraser Non Pvc]]></ProductName>
+        <ProductCode><![CDATA[4712805740536]]></ProductCode>
+        <Category><![CDATA[Erasers]]></Category>
+        <ProductSummary><![CDATA[Tweety Shaped Eraser Non Pvc , Retail Packaging, No Warranty]]></ProductSummary>
+        <Price>4.991000</Price>
+        <AvailableQty>Yes</AvailableQty>
+        <image><![CDATA[https://brainware.co.za/ProdImg/Big_Tweety-Shaped-Eraser-Non-PVC-.jpg]]></image>
+    </product>
+
+    <product>
+        <ProductName><![CDATA[Tweety Jelly Eraser, Retail Packaging, No Warranty]]></ProductName>
+        <ProductCode><![CDATA[4712805740574]]></ProductCode>
+        <Category><![CDATA[Erasers]]></Category>
+        <ProductSummary><![CDATA[Tweety Jelly Eraser, Retail Packaging, No Warranty]]></ProductSummary>
+        <Price>4.991000</Price>
+        <AvailableQty>Yes</AvailableQty>
+        <image><![CDATA[https://brainware.co.za/ProdImg/Big_4712805740574.JPG]]></image>
+    </product>
+</products>                                     
