@@ -108,4 +108,10 @@
     <product_page_url></product_page_url>
     <tax:product_brand></tax:product_brand>
     <tax:product_type></tax:product_type>
-    <tax:produc
+    <tax:product_visibility></tax:product_visibility>
+    <tax:product_cat></tax:product_cat>
+    <tax:product_tag></tax:product_tag>
+    <tax:product_shipping_class></tax:product_shipping_class>
+    <meta:total_sales></meta:total_sales>
+  </product>
+</products>
